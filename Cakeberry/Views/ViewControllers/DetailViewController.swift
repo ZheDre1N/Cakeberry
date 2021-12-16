@@ -1,5 +1,5 @@
 //
-//  MenuViewController.swift
+//  ProductViewController.swift
 //  Cakeberry
 //
 //  Created by Eugene Dudkin on 16.12.2021.
@@ -7,24 +7,16 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class DetailViewController: UIViewController {
 
-    @IBOutlet weak var testLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "Меню"
-        testLabel.text = "Loading"
+        view.backgroundColor = .green
+        print("hi")
         // Do any additional setup after loading the view.
-
     }
 
-    @IBAction func buttonWasTapped(_ sender: Any) {
-        let detailVC = DetailViewController()
-        navigationController?.pushViewController(detailVC, animated: true)
-    }
-    
+
     /*
     // MARK: - Navigation
 

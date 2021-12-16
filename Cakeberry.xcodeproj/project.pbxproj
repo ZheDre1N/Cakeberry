@@ -13,6 +13,15 @@
 		DFA148FF276B636900A86C54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFA148FD276B636900A86C54 /* LaunchScreen.storyboard */; };
 		DFA14918276B69A400A86C54 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA14916276B69A400A86C54 /* MenuViewController.swift */; };
 		DFA14919276B69A400A86C54 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA14917276B69A400A86C54 /* MenuViewController.xib */; };
+		DFA1491C276B78AB00A86C54 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1491A276B78AB00A86C54 /* DetailViewController.swift */; };
+		DFA1491D276B78AB00A86C54 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA1491B276B78AB00A86C54 /* DetailViewController.xib */; };
+		DFA1491F276B7A8300A86C54 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1491E276B7A8300A86C54 /* Coordinator.swift */; };
+		DFA14924276B7F6C00A86C54 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA14922276B7F6C00A86C54 /* CartViewController.swift */; };
+		DFA14925276B7F6C00A86C54 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA14923276B7F6C00A86C54 /* CartViewController.xib */; };
+		DFA14928276B805600A86C54 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA14926276B805600A86C54 /* ProfileViewController.swift */; };
+		DFA14929276B805600A86C54 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA14927276B805600A86C54 /* ProfileViewController.xib */; };
+		DFA1492C276B817500A86C54 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1492A276B817500A86C54 /* ContactsViewController.swift */; };
+		DFA1492D276B817500A86C54 /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA1492B276B817500A86C54 /* ContactsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		DFA14900276B636900A86C54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFA14916276B69A400A86C54 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DFA14917276B69A400A86C54 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		DFA1491A276B78AB00A86C54 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DFA1491B276B78AB00A86C54 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		DFA1491E276B7A8300A86C54 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DFA14922276B7F6C00A86C54 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		DFA14923276B7F6C00A86C54 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
+		DFA14926276B805600A86C54 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DFA14927276B805600A86C54 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		DFA1492A276B817500A86C54 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		DFA1492B276B817500A86C54 /* ContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +80,7 @@
 				DFA14909276B63FF00A86C54 /* Library */,
 				DFA1490A276B640800A86C54 /* Application */,
 				DFA1490B276B641000A86C54 /* Resources */,
+				DFA1491E276B7A8300A86C54 /* Coordinator.swift */,
 			);
 			path = Cakeberry;
 			sourceTree = "<group>";
@@ -70,6 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				DFA14916276B69A400A86C54 /* MenuViewController.swift */,
+				DFA1491A276B78AB00A86C54 /* DetailViewController.swift */,
+				DFA14926276B805600A86C54 /* ProfileViewController.swift */,
+				DFA1492A276B817500A86C54 /* ContactsViewController.swift */,
+				DFA14922276B7F6C00A86C54 /* CartViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -85,6 +108,10 @@
 			isa = PBXGroup;
 			children = (
 				DFA14917276B69A400A86C54 /* MenuViewController.xib */,
+				DFA1491B276B78AB00A86C54 /* DetailViewController.xib */,
+				DFA14927276B805600A86C54 /* ProfileViewController.xib */,
+				DFA1492B276B817500A86C54 /* ContactsViewController.xib */,
+				DFA14923276B7F6C00A86C54 /* CartViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFA14903276B636900A86C54 /* Build configuration list for PBXNativeTarget "Cakeberry" */;
 			buildPhases = (
+				DFA14930276B893B00A86C54 /* ShellScript */,
 				DFA148EB276B636800A86C54 /* Sources */,
 				DFA148EC276B636800A86C54 /* Frameworks */,
 				DFA148ED276B636800A86C54 /* Resources */,
@@ -237,13 +265,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA1492D276B817500A86C54 /* ContactsViewController.xib in Resources */,
+				DFA14929276B805600A86C54 /* ProfileViewController.xib in Resources */,
 				DFA148FF276B636900A86C54 /* LaunchScreen.storyboard in Resources */,
 				DFA14919276B69A400A86C54 /* MenuViewController.xib in Resources */,
+				DFA1491D276B78AB00A86C54 /* DetailViewController.xib in Resources */,
+				DFA14925276B7F6C00A86C54 /* CartViewController.xib in Resources */,
 				DFA148FC276B636900A86C54 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DFA14930276B893B00A86C54 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DFA148EB276B636800A86C54 /* Sources */ = {
@@ -252,6 +304,11 @@
 			files = (
 				DFA148F3276B636800A86C54 /* AppDelegate.swift in Sources */,
 				DFA14918276B69A400A86C54 /* MenuViewController.swift in Sources */,
+				DFA1491F276B7A8300A86C54 /* Coordinator.swift in Sources */,
+				DFA1491C276B78AB00A86C54 /* DetailViewController.swift in Sources */,
+				DFA14928276B805600A86C54 /* ProfileViewController.swift in Sources */,
+				DFA1492C276B817500A86C54 /* ContactsViewController.swift in Sources */,
+				DFA14924276B7F6C00A86C54 /* CartViewController.swift in Sources */,
 				DFA148F5276B636800A86C54 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,13 +17,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-
+        
         // Declaration ViewControllers.
         let menuVC = MenuViewController()
-        
+        let profileVC = ProfileViewController()
+        let contactsVC = ContactsViewController()
+        let cartVC = CartViewController()
+
         // Creating Navigation View Controllers.
         let navigationMenuVC = UINavigationController(rootViewController: menuVC)
-        let tabBarViewControllers = [navigationMenuVC]
+        let navigationProfileVC = UINavigationController(rootViewController: profileVC)
+        let navigationContactsVC = UINavigationController(rootViewController: contactsVC)
+        let navigationCartVC = UINavigationController(rootViewController: cartVC)
+
+        let tabBarViewControllers = [navigationMenuVC, navigationProfileVC, navigationContactsVC, navigationCartVC]
         
         // Creating a TabBarController.
         let tabBarVC = UITabBarController()
@@ -35,7 +42,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             tabBarItem0.image = UIImage(systemName: "character.bubble")
             tabBarItem0.selectedImage = UIImage(systemName: "character.bubble.fill")
         }
-
+        if let tabBarItem1 = tabBarVC.tabBar.items?[1] {
+            tabBarItem1.title = "Профиль"
+            tabBarItem1.image = UIImage(systemName: "character.bubble")
+            tabBarItem1.selectedImage = UIImage(systemName: "character.bubble.fill")
+        }
+        if let tabBarItem2 = tabBarVC.tabBar.items?[2] {
+            tabBarItem2.title = "Контакты"
+            tabBarItem2.image = UIImage(systemName: "character.bubble")
+            tabBarItem2.selectedImage = UIImage(systemName: "character.bubble.fill")
+        }
+        if let tabBarItem3 = tabBarVC.tabBar.items?[3] {
+            tabBarItem3.title = "Корзина"
+            tabBarItem3.image = UIImage(systemName: "character.bubble")
+            tabBarItem3.selectedImage = UIImage(systemName: "character.bubble.fill")
+        }
         
         // Configure a window.
         window = UIWindow(frame: UIScreen.main.bounds)
