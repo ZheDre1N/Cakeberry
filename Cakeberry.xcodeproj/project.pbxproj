@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF488B79276BB9CB003564C1 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF488B78276BB9CB003564C1 /* MenuViewModel.swift */; };
 		DFA148F3276B636800A86C54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA148F2276B636800A86C54 /* AppDelegate.swift */; };
 		DFA148F5276B636800A86C54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA148F4276B636800A86C54 /* SceneDelegate.swift */; };
 		DFA148FC276B636900A86C54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFA148FB276B636900A86C54 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DF488B78276BB9CB003564C1 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		DFA148EF276B636800A86C54 /* Cakeberry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cakeberry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA148F2276B636800A86C54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFA148F4276B636800A86C54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		DFA14913276B66B500A86C54 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DF488B78276BB9CB003564C1 /* MenuViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				DFA148F3276B636800A86C54 /* AppDelegate.swift in Sources */,
 				DFA14918276B69A400A86C54 /* MenuViewController.swift in Sources */,
 				DFA1491F276B7A8300A86C54 /* Coordinator.swift in Sources */,
+				DF488B79276BB9CB003564C1 /* MenuViewModel.swift in Sources */,
 				DFA1491C276B78AB00A86C54 /* DetailViewController.swift in Sources */,
 				DFA14928276B805600A86C54 /* ProfileViewController.swift in Sources */,
 				DFA1492C276B817500A86C54 /* ContactsViewController.swift in Sources */,

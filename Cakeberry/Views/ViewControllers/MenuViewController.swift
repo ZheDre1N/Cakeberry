@@ -8,31 +8,25 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
-    @IBOutlet weak var testLabel: UILabel!
     
+//    private var viewModel: MenuViewModelProtocol
+//
+//    // MARK: - init
+//    init(viewModel: MenuViewModel) {
+//        self.viewModel = viewModel
+//        super.init(nibName: nil, bundle: nil)
+//    }
+//    
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Меню"
-        testLabel.text = "Loading"
         // Do any additional setup after loading the view.
 
     }
-
-    @IBAction func buttonWasTapped(_ sender: Any) {
-        let detailVC = DetailViewController()
-        navigationController?.pushViewController(detailVC, animated: true)
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
