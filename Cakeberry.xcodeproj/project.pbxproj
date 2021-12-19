@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF488B79276BB9CB003564C1 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF488B78276BB9CB003564C1 /* MenuViewModel.swift */; };
 		DFA148F3276B636800A86C54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA148F2276B636800A86C54 /* AppDelegate.swift */; };
 		DFA148F5276B636800A86C54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA148F4276B636800A86C54 /* SceneDelegate.swift */; };
 		DFA148FC276B636900A86C54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFA148FB276B636900A86C54 /* Assets.xcassets */; };
@@ -23,10 +22,13 @@
 		DFA14929276B805600A86C54 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA14927276B805600A86C54 /* ProfileViewController.xib */; };
 		DFA1492C276B817500A86C54 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1492A276B817500A86C54 /* ContactsViewController.swift */; };
 		DFA1492D276B817500A86C54 /* ContactsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA1492B276B817500A86C54 /* ContactsViewController.xib */; };
+		DFA9AD2A276F9D900093613D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9AD29276F9D900093613D /* MainTabBarController.swift */; };
+		DFA9AD2D276F9EC50093613D /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9AD2C276F9EC50093613D /* MenuCoordinator.swift */; };
+		DFA9AD2F276F9ED60093613D /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9AD2E276F9ED60093613D /* ProfileCoordinator.swift */; };
+		DFA9AD31276FA9790093613D /* CoordinatedNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9AD30276FA9790093613D /* CoordinatedNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DF488B78276BB9CB003564C1 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		DFA148EF276B636800A86C54 /* Cakeberry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cakeberry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFA148F2276B636800A86C54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFA148F4276B636800A86C54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +46,10 @@
 		DFA14927276B805600A86C54 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		DFA1492A276B817500A86C54 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		DFA1492B276B817500A86C54 /* ContactsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsViewController.xib; sourceTree = "<group>"; };
+		DFA9AD29276F9D900093613D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		DFA9AD2C276F9EC50093613D /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
+		DFA9AD2E276F9ED60093613D /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		DFA9AD30276FA9790093613D /* CoordinatedNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,66 +82,21 @@
 		DFA148F1276B636800A86C54 /* Cakeberry */ = {
 			isa = PBXGroup;
 			children = (
-				DFA14907276B63EF00A86C54 /* Models */,
-				DFA14912276B667200A86C54 /* Views */,
-				DFA14913276B66B500A86C54 /* ViewModels */,
-				DFA14909276B63FF00A86C54 /* Library */,
 				DFA1490A276B640800A86C54 /* Application */,
+				DFA9AD32276FAB410093613D /* Activities */,
+				DFA9AD37276FAFDA0093613D /* Library */,
 				DFA1490B276B641000A86C54 /* Resources */,
-				DFA1491E276B7A8300A86C54 /* Coordinator.swift */,
 			);
 			path = Cakeberry;
-			sourceTree = "<group>";
-		};
-		DFA14906276B63E300A86C54 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				DFA14916276B69A400A86C54 /* MenuViewController.swift */,
-				DFA1491A276B78AB00A86C54 /* DetailViewController.swift */,
-				DFA14926276B805600A86C54 /* ProfileViewController.swift */,
-				DFA1492A276B817500A86C54 /* ContactsViewController.swift */,
-				DFA14922276B7F6C00A86C54 /* CartViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		DFA14907276B63EF00A86C54 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		DFA14908276B63F500A86C54 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				DFA14917276B69A400A86C54 /* MenuViewController.xib */,
-				DFA1491B276B78AB00A86C54 /* DetailViewController.xib */,
-				DFA14927276B805600A86C54 /* ProfileViewController.xib */,
-				DFA1492B276B817500A86C54 /* ContactsViewController.xib */,
-				DFA14923276B7F6C00A86C54 /* CartViewController.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		DFA14909276B63FF00A86C54 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				DFA14910276B64E300A86C54 /* Vendors */,
-				DFA1490F276B64D500A86C54 /* Singleton */,
-				DFA1490E276B64C800A86C54 /* Constants */,
-				DFA1490D276B64C000A86C54 /* API */,
-				DFA1490C276B64B900A86C54 /* Helpers */,
-			);
-			path = Library;
 			sourceTree = "<group>";
 		};
 		DFA1490A276B640800A86C54 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				DFA148FD276B636900A86C54 /* LaunchScreen.storyboard */,
 				DFA148F2276B636800A86C54 /* AppDelegate.swift */,
 				DFA148F4276B636800A86C54 /* SceneDelegate.swift */,
+				DFA9AD29276F9D900093613D /* MainTabBarController.swift */,
+				DFA148FD276B636900A86C54 /* LaunchScreen.storyboard */,
 				DFA14900276B636900A86C54 /* Info.plist */,
 			);
 			path = Application;
@@ -150,41 +111,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		DFA1490C276B64B900A86C54 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		DFA1490D276B64C000A86C54 /* API */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = API;
-			sourceTree = "<group>";
-		};
-		DFA1490E276B64C800A86C54 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
-		DFA1490F276B64D500A86C54 /* Singleton */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Singleton;
-			sourceTree = "<group>";
-		};
-		DFA14910276B64E300A86C54 /* Vendors */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Vendors;
-			sourceTree = "<group>";
-		};
 		DFA14911276B64F700A86C54 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,21 +118,120 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
-		DFA14912276B667200A86C54 /* Views */ = {
+		DFA9AD32276FAB410093613D /* Activities */ = {
 			isa = PBXGroup;
 			children = (
-				DFA14908276B63F500A86C54 /* Views */,
-				DFA14906276B63E300A86C54 /* ViewControllers */,
+				DFA9AD33276FAB480093613D /* Menu */,
+				DFA9AD34276FAB4E0093613D /* Profile */,
+				DFA9AD35276FAB5A0093613D /* Contacts */,
+				DFA9AD36276FAB670093613D /* Card */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		DFA9AD33276FAB480093613D /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				DFA9AD2C276F9EC50093613D /* MenuCoordinator.swift */,
+				DFA9AD3C276FB97E0093613D /* Views */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		DFA9AD34276FAB4E0093613D /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				DFA9AD2E276F9ED60093613D /* ProfileCoordinator.swift */,
+				DFA9AD3D276FB9950093613D /* Views */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		DFA9AD35276FAB5A0093613D /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				DFA9AD3E276FB9AC0093613D /* Views */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		DFA9AD36276FAB670093613D /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				DFA9AD3F276FB9BC0093613D /* Views */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
+		DFA9AD37276FAFDA0093613D /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DFA9AD3B276FB4CB0093613D /* Base classes */,
+				DFA9AD39276FB0810093613D /* Protocols */,
+				DFA9AD38276FB0770093613D /* Extensions */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		DFA9AD38276FB0770093613D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DFA9AD39276FB0810093613D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DFA1491E276B7A8300A86C54 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DFA9AD3B276FB4CB0093613D /* Base classes */ = {
+			isa = PBXGroup;
+			children = (
+				DFA9AD30276FA9790093613D /* CoordinatedNavigationController.swift */,
+			);
+			path = "Base classes";
+			sourceTree = "<group>";
+		};
+		DFA9AD3C276FB97E0093613D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFA1491A276B78AB00A86C54 /* DetailViewController.swift */,
+				DFA14916276B69A400A86C54 /* MenuViewController.swift */,
+				DFA1491B276B78AB00A86C54 /* DetailViewController.xib */,
+				DFA14917276B69A400A86C54 /* MenuViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		DFA14913276B66B500A86C54 /* ViewModels */ = {
+		DFA9AD3D276FB9950093613D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DF488B78276BB9CB003564C1 /* MenuViewModel.swift */,
+				DFA14927276B805600A86C54 /* ProfileViewController.xib */,
+				DFA14926276B805600A86C54 /* ProfileViewController.swift */,
 			);
-			path = ViewModels;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DFA9AD3E276FB9AC0093613D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFA1492A276B817500A86C54 /* ContactsViewController.swift */,
+				DFA1492B276B817500A86C54 /* ContactsViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DFA9AD3F276FB9BC0093613D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFA14922276B7F6C00A86C54 /* CartViewController.swift */,
+				DFA14923276B7F6C00A86C54 /* CartViewController.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,10 +332,13 @@
 			files = (
 				DFA148F3276B636800A86C54 /* AppDelegate.swift in Sources */,
 				DFA14918276B69A400A86C54 /* MenuViewController.swift in Sources */,
+				DFA9AD2A276F9D900093613D /* MainTabBarController.swift in Sources */,
 				DFA1491F276B7A8300A86C54 /* Coordinator.swift in Sources */,
-				DF488B79276BB9CB003564C1 /* MenuViewModel.swift in Sources */,
+				DFA9AD2F276F9ED60093613D /* ProfileCoordinator.swift in Sources */,
 				DFA1491C276B78AB00A86C54 /* DetailViewController.swift in Sources */,
+				DFA9AD31276FA9790093613D /* CoordinatedNavigationController.swift in Sources */,
 				DFA14928276B805600A86C54 /* ProfileViewController.swift in Sources */,
+				DFA9AD2D276F9EC50093613D /* MenuCoordinator.swift in Sources */,
 				DFA1492C276B817500A86C54 /* ContactsViewController.swift in Sources */,
 				DFA14924276B7F6C00A86C54 /* CartViewController.swift in Sources */,
 				DFA148F5276B636800A86C54 /* SceneDelegate.swift in Sources */,

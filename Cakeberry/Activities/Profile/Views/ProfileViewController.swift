@@ -9,9 +9,12 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    var coordinator: ProfileCoordinator?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Профиль"
         // Do any additional setup after loading the view.
     }
 
