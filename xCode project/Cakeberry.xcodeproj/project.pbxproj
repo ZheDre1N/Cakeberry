@@ -31,6 +31,8 @@
 		DFCA257B27705DB300EE07C1 /* StorytellerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = DFCA257A27705DB300EE07C1 /* StorytellerSDK */; };
 		DFCE370A2771AC11008CF55F /* StorytellerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCE37092771AC11008CF55F /* StorytellerView.swift */; };
 		DFCE370C2771AF12008CF55F /* StorytellerTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCE370B2771AF12008CF55F /* StorytellerTheme.swift */; };
+		DFE39997277252F8004B3DC4 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE39995277252F8004B3DC4 /* PopularCollectionViewCell.swift */; };
+		DFE39998277252F8004B3DC4 /* PopularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE39996277252F8004B3DC4 /* PopularCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,8 @@
 		DFCA25772770587300EE07C1 /* CartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCoordinator.swift; sourceTree = "<group>"; };
 		DFCE37092771AC11008CF55F /* StorytellerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytellerView.swift; sourceTree = "<group>"; };
 		DFCE370B2771AF12008CF55F /* StorytellerTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytellerTheme.swift; sourceTree = "<group>"; };
+		DFE39995277252F8004B3DC4 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
+		DFE39996277252F8004B3DC4 /* PopularCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				DFA9AD2C276F9EC50093613D /* MenuCoordinator.swift */,
+				DFE39994277252D1004B3DC4 /* PopularCollectionView */,
 				DFCA257C2770936200EE07C1 /* Storyteller */,
 				DFA9AD3C276FB97E0093613D /* Views */,
 			);
@@ -256,6 +261,15 @@
 			path = Storyteller;
 			sourceTree = "<group>";
 		};
+		DFE39994277252D1004B3DC4 /* PopularCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				DFE39995277252F8004B3DC4 /* PopularCollectionViewCell.swift */,
+				DFE39996277252F8004B3DC4 /* PopularCollectionViewCell.xib */,
+			);
+			path = PopularCollectionView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -321,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFE39998277252F8004B3DC4 /* PopularCollectionViewCell.xib in Resources */,
 				DFA1492D276B817500A86C54 /* ContactsViewController.xib in Resources */,
 				DFA14929276B805600A86C54 /* ProfileViewController.xib in Resources */,
 				DFA148FF276B636900A86C54 /* LaunchScreen.storyboard in Resources */,
@@ -364,6 +379,7 @@
 				DFA1491F276B7A8300A86C54 /* Coordinator.swift in Sources */,
 				DFCE370A2771AC11008CF55F /* StorytellerView.swift in Sources */,
 				DFA9AD2F276F9ED60093613D /* ProfileCoordinator.swift in Sources */,
+				DFE39997277252F8004B3DC4 /* PopularCollectionViewCell.swift in Sources */,
 				DFA1491C276B78AB00A86C54 /* DetailViewController.swift in Sources */,
 				DFCA25782770587300EE07C1 /* CartCoordinator.swift in Sources */,
 				DFA9AD31276FA9790093613D /* CoordinatedNavigationController.swift in Sources */,
