@@ -11,7 +11,6 @@
 		DFA148F5276B636800A86C54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA148F4276B636800A86C54 /* SceneDelegate.swift */; };
 		DFA148FC276B636900A86C54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFA148FB276B636900A86C54 /* Assets.xcassets */; };
 		DFA148FF276B636900A86C54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFA148FD276B636900A86C54 /* LaunchScreen.storyboard */; };
-		DFA14918276B69A400A86C54 /* OldMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA14916276B69A400A86C54 /* OldMenuViewController.swift */; };
 		DFA1491F276B7A8300A86C54 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA1491E276B7A8300A86C54 /* Coordinator.swift */; };
 		DFA14924276B7F6C00A86C54 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA14922276B7F6C00A86C54 /* CartViewController.swift */; };
 		DFA14925276B7F6C00A86C54 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFA14923276B7F6C00A86C54 /* CartViewController.xib */; };
@@ -30,8 +29,8 @@
 		DFCA25762770577800EE07C1 /* ContactsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCA25752770577800EE07C1 /* ContactsCoordinator.swift */; };
 		DFCA25782770587300EE07C1 /* CartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCA25772770587300EE07C1 /* CartCoordinator.swift */; };
 		DFCA257B27705DB300EE07C1 /* StorytellerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = DFCA257A27705DB300EE07C1 /* StorytellerSDK */; };
-		DFD89D0427844A8100E9128D /* StorytellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD89D0227844A8100E9128D /* StorytellerCell.swift */; };
-		DFD89D0527844A8100E9128D /* StorytellerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD89D0327844A8100E9128D /* StorytellerCell.xib */; };
+		DFD89D0A27845E4F00E9128D /* StorytellerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD89D0827845E4F00E9128D /* StorytellerCell.swift */; };
+		DFD89D0B27845E4F00E9128D /* StorytellerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFD89D0927845E4F00E9128D /* StorytellerCell.xib */; };
 		DFE39997277252F8004B3DC4 /* PopularCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE39995277252F8004B3DC4 /* PopularCell.swift */; };
 		DFE39998277252F8004B3DC4 /* PopularCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFE39996277252F8004B3DC4 /* PopularCell.xib */; };
 		DFFAB6FB27832B4200BDF7F7 /* Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFAB6FA27832B4200BDF7F7 /* Popular.swift */; };
@@ -48,7 +47,6 @@
 		DFA148FB276B636900A86C54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFA148FE276B636900A86C54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DFA14900276B636900A86C54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DFA14916276B69A400A86C54 /* OldMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldMenuViewController.swift; sourceTree = "<group>"; };
 		DFA1491E276B7A8300A86C54 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		DFA14922276B7F6C00A86C54 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		DFA14923276B7F6C00A86C54 /* CartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
@@ -66,8 +64,8 @@
 		DFAB0C12278240A6003F0937 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		DFCA25752770577800EE07C1 /* ContactsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsCoordinator.swift; sourceTree = "<group>"; };
 		DFCA25772770587300EE07C1 /* CartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCoordinator.swift; sourceTree = "<group>"; };
-		DFD89D0227844A8100E9128D /* StorytellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytellerCell.swift; sourceTree = "<group>"; };
-		DFD89D0327844A8100E9128D /* StorytellerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StorytellerCell.xib; sourceTree = "<group>"; };
+		DFD89D0827845E4F00E9128D /* StorytellerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytellerCell.swift; sourceTree = "<group>"; };
+		DFD89D0927845E4F00E9128D /* StorytellerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StorytellerCell.xib; sourceTree = "<group>"; };
 		DFE39995277252F8004B3DC4 /* PopularCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCell.swift; sourceTree = "<group>"; };
 		DFE39996277252F8004B3DC4 /* PopularCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCell.xib; sourceTree = "<group>"; };
 		DFFAB6FA27832B4200BDF7F7 /* Popular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popular.swift; sourceTree = "<group>"; };
@@ -160,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				DFA9AD2C276F9EC50093613D /* MenuCoordinator.swift */,
+				DFD89D0C27846D0F00E9128D /* Helpers */,
 				DFA9AD3C276FB97E0093613D /* Sceens */,
 				DFE39994277252D1004B3DC4 /* Cells */,
 				DFFAB6F927832AB000BDF7F7 /* Model */,
@@ -232,7 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				DFAB0C0C278223CF003F0937 /* MenuViewController.swift */,
-				DFAB0C10278227EB003F0937 /* for delete */,
 			);
 			path = Sceens;
 			sourceTree = "<group>";
@@ -271,12 +269,11 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		DFAB0C10278227EB003F0937 /* for delete */ = {
+		DFD89D0C27846D0F00E9128D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				DFA14916276B69A400A86C54 /* OldMenuViewController.swift */,
 			);
-			path = "for delete";
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		DFE39994277252D1004B3DC4 /* Cells */ = {
@@ -288,8 +285,8 @@
 				DFE39996277252F8004B3DC4 /* PopularCell.xib */,
 				DFFAB6FE27834EBF00BDF7F7 /* CategoryCell.swift */,
 				DFFAB6FF27834EBF00BDF7F7 /* CategoryCell.xib */,
-				DFD89D0227844A8100E9128D /* StorytellerCell.swift */,
-				DFD89D0327844A8100E9128D /* StorytellerCell.xib */,
+				DFD89D0827845E4F00E9128D /* StorytellerCell.swift */,
+				DFD89D0927845E4F00E9128D /* StorytellerCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -373,7 +370,7 @@
 				DFA1492D276B817500A86C54 /* ContactsViewController.xib in Resources */,
 				DFA14929276B805600A86C54 /* ProfileViewController.xib in Resources */,
 				DFAB0C14278240A6003F0937 /* ProductCell.xib in Resources */,
-				DFD89D0527844A8100E9128D /* StorytellerCell.xib in Resources */,
+				DFD89D0B27845E4F00E9128D /* StorytellerCell.xib in Resources */,
 				DFA148FF276B636900A86C54 /* LaunchScreen.storyboard in Resources */,
 				DFA14925276B7F6C00A86C54 /* CartViewController.xib in Resources */,
 				DFFAB70127834EBF00BDF7F7 /* CategoryCell.xib in Resources */,
@@ -410,7 +407,6 @@
 			files = (
 				DFFAB6FD27832C7400BDF7F7 /* Product.swift in Sources */,
 				DFA148F3276B636800A86C54 /* AppDelegate.swift in Sources */,
-				DFA14918276B69A400A86C54 /* OldMenuViewController.swift in Sources */,
 				DFA9AD2A276F9D900093613D /* MainTabBarController.swift in Sources */,
 				DFA1491F276B7A8300A86C54 /* Coordinator.swift in Sources */,
 				DFA9AD2F276F9ED60093613D /* ProfileCoordinator.swift in Sources */,
@@ -421,7 +417,7 @@
 				DFCA25762770577800EE07C1 /* ContactsCoordinator.swift in Sources */,
 				DFA14928276B805600A86C54 /* ProfileViewController.swift in Sources */,
 				DFA9AD2D276F9EC50093613D /* MenuCoordinator.swift in Sources */,
-				DFD89D0427844A8100E9128D /* StorytellerCell.swift in Sources */,
+				DFD89D0A27845E4F00E9128D /* StorytellerCell.swift in Sources */,
 				DFA1492C276B817500A86C54 /* ContactsViewController.swift in Sources */,
 				DFA14924276B7F6C00A86C54 /* CartViewController.swift in Sources */,
 				DFAB0C13278240A6003F0937 /* ProductCell.swift in Sources */,

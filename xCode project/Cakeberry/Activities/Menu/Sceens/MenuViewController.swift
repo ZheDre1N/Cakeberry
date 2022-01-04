@@ -15,7 +15,7 @@ class MenuViewController: UIViewController {
     var dataSource: UICollectionViewDiffableDataSource<Section, Int>! = nil
     
     enum Section: Int, CaseIterable {
-//        case story
+        case story
         case popular
         case category
         case product
@@ -47,8 +47,8 @@ class MenuViewController: UIViewController {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .secondarySystemBackground
-//        let nib1 = UINib(nibName: "StorytellerCell", bundle: nil)
-//        collectionView.register(nib1, forCellWithReuseIdentifier: StorytellerCell.reuseIdentifier)
+        let nib1 = UINib(nibName: "StorytellerCell", bundle: nil)
+        collectionView.register(nib1, forCellWithReuseIdentifier: StorytellerCell.reuseIdentifier)
         let nib2 = UINib(nibName: "PopularCell", bundle: nil)
         collectionView.register(nib2, forCellWithReuseIdentifier: PopularCell.reuseIdentifier)
         let nib3 = UINib(nibName: "CategoryCell", bundle: nil)
@@ -58,18 +58,26 @@ class MenuViewController: UIViewController {
         view.addSubview(collectionView)
     }
     
-    
     private var popular: [Popular] = Popular.testData()
     private var categories: [Category] = Category.testData()
     private var products: [Product] = Product.testData()
     
-    private lazy var popularRange: ClosedRange<Int> = 1...popular.count
+    private lazy var storytellerRange: ClosedRange<Int> = 1...1
+    private lazy var popularRange: ClosedRange<Int> = (storytellerRange.upperBound + 1)...(storytellerRange.upperBound + popular.count)
     private lazy var categoriesRange: ClosedRange<Int> = (popularRange.upperBound + 1)...(popularRange.upperBound + categories.count)
     private lazy var productsRange: ClosedRange<Int> = (categoriesRange.upperBound + 1)...(categoriesRange.upperBound + products.count)
     
     private func configureDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) {
-            (collectionView: UICollectionView, indexPath: IndexPath, identifier: Int) -> UICollectionViewCell? in
+        dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView)
+        { (collectionView: UICollectionView, indexPath: IndexPath, identifier: Int) -> UICollectionViewCell? in
+            
+            if self.storytellerRange ~= identifier {
+                guard let cell = collectionView.dequeueReusableCell(
+                    withReuseIdentifier: StorytellerCell.reuseIdentifier,
+                    for: indexPath) as? StorytellerCell else
+                    { fatalError("Cannot create the cell") }
+                return cell
+            }
             
             if self.popularRange ~= identifier {
                 guard let cell = collectionView.dequeueReusableCell(
@@ -88,7 +96,11 @@ class MenuViewController: UIViewController {
             }
             
             if self.productsRange ~= identifier {
-                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCell.reuseIdentifier, for: indexPath) as? ProductCell else { fatalError("Cannot create the cell") }
+                guard let cell = collectionView.dequeueReusableCell(
+                    withReuseIdentifier: ProductCell.reuseIdentifier,
+                    for: indexPath) as? ProductCell else {
+                        fatalError("Cannot create the cell")
+                    }
                 let product = self.products[indexPath.row]
                 cell.configure(with: product.title, description: product.description, imageName: product.imageName, price: product.price)
                 return cell
@@ -98,18 +110,22 @@ class MenuViewController: UIViewController {
         }
         
         var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
-        let sections: [Section] = [.popular, .category, .product]
+        let sections: [Section] = [.story, .popular, .category, .product]
         snapshot.appendSections([sections[0]])
-        snapshot.appendItems(Array(popularRange))
+        snapshot.appendItems(Array(storytellerRange))
         snapshot.appendSections([sections[1]])
-        snapshot.appendItems(Array(categoriesRange))
+        snapshot.appendItems(Array(popularRange))
         snapshot.appendSections([sections[2]])
+        snapshot.appendItems(Array(categoriesRange))
+        snapshot.appendSections([sections[3]])
         snapshot.appendItems(Array(productsRange))
         dataSource.apply(snapshot, animatingDifferences: false)
     }
     
     private func layoutSection(for section: Section, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         switch section {
+        case .story:
+            return storytellerSection()
         case .popular:
             return popularSection()
         case .category:
@@ -117,6 +133,22 @@ class MenuViewController: UIViewController {
         case .product:
             return productsSection()
         }
+    }
+    
+    private func storytellerSection() -> NSCollectionLayoutSection {
+        
+        // Config item
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        // Config group
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(160))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+        
+        // Config section
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .none
+        return section
     }
     
     private func popularSection() -> NSCollectionLayoutSection {
