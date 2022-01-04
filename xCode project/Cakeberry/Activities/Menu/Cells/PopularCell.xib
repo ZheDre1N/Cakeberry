@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,40 +11,45 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularCollectionViewCell" id="gTV-IL-0wX" customClass="PopularCollectionViewCell" customModule="Cakeberry" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="310" height="96"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularCell" id="gTV-IL-0wX" customClass="PopularCell" customModule="Cakeberry" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="448" height="156"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="310" height="96"/>
+                <rect key="frame" x="0.0" y="0.0" width="448" height="156"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IhC-Ch-NED" userLabel="ContentView">
-                        <rect key="frame" x="5" y="5" width="300" height="86"/>
+                        <rect key="frame" x="0.0" y="0.0" width="448" height="156"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p1" translatesAutoresizingMaskIntoConstraints="NO" id="2kJ-VE-xfs">
-                                <rect key="frame" x="8" y="8" width="70" height="70"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2kJ-VE-xfs">
+                                <rect key="frame" x="8" y="43" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="ZYf-kY-vUa"/>
                                     <constraint firstAttribute="height" constant="70" id="dnK-QQ-5hX"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Твой кодык" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0Q-tv-4xq">
-                                <rect key="frame" x="86" y="14.5" width="77.5" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0Q-tv-4xq">
+                                <rect key="frame" x="86" y="49.5" width="71" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBb-kb-kf7">
-                                <rect key="frame" x="86" y="48" width="83" height="24"/>
+                                <rect key="frame" x="86" y="83" width="83" height="24"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="От 1200₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztp-as-ftZ">
-                                        <rect key="frame" x="10.5" y="3.5" width="62.5" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="priceLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztp-as-ftZ">
+                                        <rect key="frame" x="8" y="3.5" width="67.5" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" systemColor="systemIndigoColor"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.47843137254901963" blue="1" alpha="0.41039540816326531" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" name="Main1"/>
                                 <constraints>
                                     <constraint firstItem="Ztp-as-ftZ" firstAttribute="centerX" secondItem="HBb-kb-kf7" secondAttribute="centerX" id="E0p-SC-oDn"/>
                                     <constraint firstItem="Ztp-as-ftZ" firstAttribute="centerY" secondItem="HBb-kb-kf7" secondAttribute="centerY" id="UpN-Qa-uaj"/>
@@ -65,34 +71,39 @@
                             <constraint firstItem="HBb-kb-kf7" firstAttribute="leading" secondItem="2kJ-VE-xfs" secondAttribute="trailing" constant="8" id="Yzd-Ao-euz"/>
                             <constraint firstItem="HBb-kb-kf7" firstAttribute="top" secondItem="2kJ-VE-xfs" secondAttribute="bottom" constant="-30" id="bAX-k0-DjV"/>
                             <constraint firstItem="I0Q-tv-4xq" firstAttribute="leading" secondItem="2kJ-VE-xfs" secondAttribute="trailing" constant="8" id="qft-CL-wqb"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I0Q-tv-4xq" secondAttribute="trailing" constant="8" id="yi4-aZ-N8r"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="IhC-Ch-NED" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="3Tc-ti-iSo"/>
-                <constraint firstAttribute="trailing" secondItem="IhC-Ch-NED" secondAttribute="trailing" constant="5" id="7ya-00-hKw"/>
-                <constraint firstItem="IhC-Ch-NED" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="aEZ-XJ-iVk"/>
-                <constraint firstAttribute="bottom" secondItem="IhC-Ch-NED" secondAttribute="bottom" constant="5" id="cvj-Hm-M2b"/>
+                <constraint firstItem="IhC-Ch-NED" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3Tc-ti-iSo"/>
+                <constraint firstAttribute="trailing" secondItem="IhC-Ch-NED" secondAttribute="trailing" id="7ya-00-hKw"/>
+                <constraint firstItem="IhC-Ch-NED" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="aEZ-XJ-iVk"/>
+                <constraint firstAttribute="bottom" secondItem="IhC-Ch-NED" secondAttribute="bottom" id="cvj-Hm-M2b"/>
             </constraints>
-            <size key="customSize" width="310" height="96"/>
+            <size key="customSize" width="448" height="156"/>
             <connections>
                 <outlet property="productContentView" destination="IhC-Ch-NED" id="nHV-ks-euI"/>
                 <outlet property="productImageView" destination="2kJ-VE-xfs" id="y5K-cN-N7G"/>
                 <outlet property="productNameLabel" destination="I0Q-tv-4xq" id="B34-pd-79b"/>
                 <outlet property="productPriceLabel" destination="Ztp-as-ftZ" id="irL-jo-hSG"/>
             </connections>
-            <point key="canvasLocation" x="-39.130434782608695" y="84.375"/>
+            <point key="canvasLocation" x="60.869565217391312" y="104.46428571428571"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="p1" width="3024" height="4032"/>
+        <namedColor name="Main1">
+            <color red="0.86699998378753662" green="0.59200000762939453" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

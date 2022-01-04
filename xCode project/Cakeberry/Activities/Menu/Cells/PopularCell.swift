@@ -7,18 +7,23 @@
 
 import UIKit
 
-class PopularCollectionViewCell: UICollectionViewCell {
+class PopularCell: UICollectionViewCell {
     
     @IBOutlet weak var productContentView: UIView!
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var productNameLabel: UILabel!
     @IBOutlet weak var productPriceLabel: UILabel!
     
+    static let reuseIdentifier = "popularCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        productContentView.layer.cornerRadius = 10
-        productImageView.layer.cornerRadius = 10
+    }
+    
+    func configure(with title: String, imageName: String, price: String) {
+        productNameLabel.text = title
+        productPriceLabel.text = price
+        productImageView.image = UIImage(named: imageName)
     }
 }

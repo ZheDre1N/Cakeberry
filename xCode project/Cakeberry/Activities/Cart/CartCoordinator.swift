@@ -19,6 +19,7 @@ class CartCoordinator: Coordinator {
         let initialVC = CartViewController()
         initialVC.tabBarItem = UITabBarItem(title: "Корзина", image: UIImage(systemName: "cart"), tag: 3)
         initialVC.tabBarItem.badgeValue = "2"
+        initialVC.tabBarItem.badgeColor = .main5
         initialVC.tabBarItem.selectedImage = UIImage(systemName: "cart.fill")
         initialVC.coordinator = self
         
