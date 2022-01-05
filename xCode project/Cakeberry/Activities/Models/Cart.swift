@@ -15,6 +15,9 @@ protocol Cart {
     
     /// Добавить товар в корзину
     mutating func addToCart(product: Product)
+    
+    /// Удалить товар из корзину
+    mutating func deleteFromCart(product: Product)
 }
 
 /// Реализация протокола Cart
@@ -23,5 +26,8 @@ struct CartImpl: Cart {
     
     mutating func addToCart(product: Product) {
         cart.append(product)
+    }
+    
+    mutating func deleteFromCart(product: Product) {
     }
 }
