@@ -8,11 +8,11 @@
 import UIKit
 
 class MenuViewController: UIViewController {
+       
+    public var coordinator: MenuCoordinator?
     
-    var coordinator: MenuCoordinator?
-    var collectionView: UICollectionView! = nil
-    
-    var dataSource: UICollectionViewDiffableDataSource<Section, Int>! = nil
+    private var collectionView: UICollectionView! = nil
+    private var dataSource: UICollectionViewDiffableDataSource<Section, Int>! = nil
     
     enum Section: Int, CaseIterable {
         case story
@@ -26,9 +26,11 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Меню"
-        
+
         configureHierarchy()
         configureDataSource()
+        
+        collectionView.delegate = self
     }
     
     private func createLayout() -> UICollectionViewLayout {
@@ -199,5 +201,13 @@ class MenuViewController: UIViewController {
         // Config section
         let section = NSCollectionLayoutSection(group: group)
         return section
+    }
+}
+
+extension MenuViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let rangeIndex = dataSource.itemIdentifier(for: indexPath) else { return }
+        coordinator?.goToProductVC(from: self, with: nil)
     }
 }

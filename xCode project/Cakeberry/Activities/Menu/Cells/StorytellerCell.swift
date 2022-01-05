@@ -11,15 +11,18 @@ import StorytellerSDK
 class StorytellerCell: UICollectionViewCell {
     
     @IBOutlet weak var storytellerRowView: StorytellerRowView!
+    
     static let reuseIdentifier = "storytellerCell"
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
-        storytellerRowView.cellType = StorytellerRowViewCellType.Square.rawValue
-        storytellerRowView.backgroundColor = .secondarySystemBackground
-        
+        fetchStorytellerView()
+        customizeStorytellerView()
+    }
+    
+    private func fetchStorytellerView() {
         let uuid = UUID().uuidString
         
         // Storyteller SDK configure. Admin must be replaced by user ID
@@ -35,7 +38,9 @@ class StorytellerCell: UICollectionViewCell {
                 // Handle the error
                 print("Storyteller sdk error: \(error.localizedDescription)")
             })
-        
     }
     
+    private func customizeStorytellerView() {
+        storytellerRowView.cellType = StorytellerRowViewCellType.Square.rawValue
+    }
 }

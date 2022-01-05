@@ -69,7 +69,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" name="Main4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="yZn-cE-qSE" secondAttribute="bottom" constant="16" id="1E8-LJ-fEy"/>
                             <constraint firstItem="vtj-c4-Dlz" firstAttribute="leading" secondItem="GNO-M1-7lT" secondAttribute="leading" constant="16" id="9mv-5j-az1"/>
@@ -112,9 +112,9 @@
         <namedColor name="Main1">
             <color red="0.86699998378753662" green="0.59200000762939453" blue="0.6470000147819519" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="Main4">
-            <color red="0.99599999189376831" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -23,4 +23,9 @@ class MenuCoordinator: Coordinator {
         
         navigationController.viewControllers = [initialVC]
     }
+    
+    func goToProductVC(from vc: UIViewController, with product: Product) {
+        let destination = ProductViewController()
+        vc.present(destination, animated: true, completion: nil)
+    }
 }
