@@ -27,6 +27,8 @@
 		DFA572F6278D8D6D007EBDCC /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA572F5278D8D6D007EBDCC /* ProfilePresenter.swift */; };
 		DFA572F8278DD46A007EBDCC /* ContactsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA572F7278DD46A007EBDCC /* ContactsPresenter.swift */; };
 		DFA572FA278DD5A6007EBDCC /* CartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA572F9278DD5A6007EBDCC /* CartPresenter.swift */; };
+		DFA57300278E0011007EBDCC /* MenuCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA572FF278E0011007EBDCC /* MenuCollectionViewLayout.swift */; };
+		DFA57302278E0903007EBDCC /* MenuCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA57301278E0903007EBDCC /* MenuCollectionViewDataSource.swift */; };
 		DFA9AD2A276F9D900093613D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9AD29276F9D900093613D /* MainTabBarController.swift */; };
 		DFA9AD2D276F9EC50093613D /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9AD2C276F9EC50093613D /* MenuCoordinator.swift */; };
 		DFA9AD2F276F9ED60093613D /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9AD2E276F9ED60093613D /* ProfileCoordinator.swift */; };
@@ -73,6 +75,8 @@
 		DFA572F5278D8D6D007EBDCC /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
 		DFA572F7278DD46A007EBDCC /* ContactsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPresenter.swift; sourceTree = "<group>"; };
 		DFA572F9278DD5A6007EBDCC /* CartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPresenter.swift; sourceTree = "<group>"; };
+		DFA572FF278E0011007EBDCC /* MenuCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewLayout.swift; sourceTree = "<group>"; };
+		DFA57301278E0903007EBDCC /* MenuCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		DFA9AD29276F9D900093613D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		DFA9AD2C276F9EC50093613D /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		DFA9AD2E276F9ED60093613D /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
@@ -165,6 +169,15 @@
 			path = Sounds;
 			sourceTree = "<group>";
 		};
+		DFA572FE278DFFFA007EBDCC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DFA572FF278E0011007EBDCC /* MenuCollectionViewLayout.swift */,
+				DFA57301278E0903007EBDCC /* MenuCollectionViewDataSource.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		DFA9AD32276FAB410093613D /* Activities */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +192,7 @@
 		DFA9AD33276FAB480093613D /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				DFA572FE278DFFFA007EBDCC /* Components */,
 				DFA9AD2C276F9EC50093613D /* MenuCoordinator.swift */,
 				DFDA4C3F278A1AD100B4146C /* Module Menu */,
 				DFDA4C40278A1AE800B4146C /* Module Detail */,
@@ -492,6 +506,7 @@
 				DFA14928276B805600A86C54 /* ProfileViewController.swift in Sources */,
 				DFA9AD2D276F9EC50093613D /* MenuCoordinator.swift in Sources */,
 				DFD89D0A27845E4F00E9128D /* StorytellerCell.swift in Sources */,
+				DFA57300278E0011007EBDCC /* MenuCollectionViewLayout.swift in Sources */,
 				DFA1492C276B817500A86C54 /* ContactsViewController.swift in Sources */,
 				DF2407B02784C46A002AFD8D /* DetailViewController.swift in Sources */,
 				DF519EEA278C9C8300B01D34 /* MenuPresenter.swift in Sources */,
@@ -500,6 +515,7 @@
 				DF519EE2278C19B600B01D34 /* DetailPresenter.swift in Sources */,
 				DFA14924276B7F6C00A86C54 /* CartViewController.swift in Sources */,
 				DFAB0C13278240A6003F0937 /* ProductCell.swift in Sources */,
+				DFA57302278E0903007EBDCC /* MenuCollectionViewDataSource.swift in Sources */,
 				DFA148F5276B636800A86C54 /* SceneDelegate.swift in Sources */,
 				DFAB0C0A278220D7003F0937 /* UIColor.swift in Sources */,
 				DFA572F6278D8D6D007EBDCC /* ProfilePresenter.swift in Sources */,
