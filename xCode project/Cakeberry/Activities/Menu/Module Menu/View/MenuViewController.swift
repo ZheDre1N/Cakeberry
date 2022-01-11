@@ -8,25 +8,18 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-       
-    public var coordinator: MenuCoordinator?
+    
+    var presenter: MenuViewPresenterProtocol!
     
     private var collectionView: UICollectionView! = nil
-    private var dataSource: UICollectionViewDiffableDataSource<Section, Int>! = nil
-    
-    enum Section: Int, CaseIterable {
-        case story
-        case popular
-        case category
-        case product
-    }
+    private var dataSource: UICollectionViewDiffableDataSource<LayoutSection, Int>! = nil
     
     // MARK: - Private properties.
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Меню"
-
+        
         configureHierarchy()
         configureDataSource()
         
@@ -35,7 +28,7 @@ class MenuViewController: UIViewController {
     
     private func createLayout() -> UICollectionViewLayout {
         let sectionProvider: UICollectionViewCompositionalLayoutSectionProvider = { (sectionIndex, layoutEnvironment) -> NSCollectionLayoutSection? in
-            guard let sectionKind = Section(rawValue: sectionIndex) else { return nil }
+            guard let sectionKind = LayoutSection(rawValue: sectionIndex) else { return nil }
             let section = self.layoutSection(for: sectionKind, layoutEnvironment: layoutEnvironment)
             return section
         }
@@ -60,9 +53,9 @@ class MenuViewController: UIViewController {
         view.addSubview(collectionView)
     }
     
-    private var popular: [Popular] = Popular.testData()
-    private var categories: [Category] = Category.testData()
-    private var products: [Product] = Product.testData()
+    private var popular: [Product] = ProductImpl.getProducts()
+    private var categories: [Product] = ProductImpl.getProducts()
+    private var products: [Product] = ProductImpl.getProducts()
     
     private lazy var storytellerRange: ClosedRange<Int> = 1...1
     private lazy var popularRange: ClosedRange<Int> = (storytellerRange.upperBound + 1)...(storytellerRange.upperBound + popular.count)
@@ -70,7 +63,7 @@ class MenuViewController: UIViewController {
     private lazy var productsRange: ClosedRange<Int> = (categoriesRange.upperBound + 1)...(categoriesRange.upperBound + products.count)
     
     private func configureDataSource() {
-        dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView)
+        dataSource = UICollectionViewDiffableDataSource<LayoutSection, Int>(collectionView: collectionView)
         { (collectionView: UICollectionView, indexPath: IndexPath, identifier: Int) -> UICollectionViewCell? in
             
             if self.storytellerRange ~= identifier {
@@ -85,7 +78,7 @@ class MenuViewController: UIViewController {
                 guard let cell = collectionView.dequeueReusableCell(
                     withReuseIdentifier: PopularCell.reuseIdentifier, for: indexPath) as? PopularCell else { fatalError("Cannot create the cell") }
                 let popularItem = self.popular[indexPath.row]
-                cell.configure(with: popularItem.title, imageName: popularItem.imageName, price: popularItem.price)
+                
                 return cell
             }
             
@@ -93,7 +86,6 @@ class MenuViewController: UIViewController {
                 guard let cell = collectionView.dequeueReusableCell(
                     withReuseIdentifier: CategoryCell.reuseIdentifier, for: indexPath) as? CategoryCell else { fatalError("Cannot create the cell") }
                 let category = self.categories[indexPath.row]
-                cell.configure(with: category.title)
                 return cell
             }
             
@@ -104,15 +96,14 @@ class MenuViewController: UIViewController {
                         fatalError("Cannot create the cell")
                     }
                 let product = self.products[indexPath.row]
-                cell.configure(with: product.title, description: product.description, imageName: product.imageName, price: product.price)
                 return cell
             }
             
             fatalError("Cannot create the cell")
         }
         
-        var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
-        let sections: [Section] = [.story, .popular, .category, .product]
+        var snapshot = NSDiffableDataSourceSnapshot<LayoutSection, Int>()
+        let sections: [LayoutSection] = [.story, .popular, .category, .product]
         snapshot.appendSections([sections[0]])
         snapshot.appendItems(Array(storytellerRange))
         snapshot.appendSections([sections[1]])
@@ -124,7 +115,7 @@ class MenuViewController: UIViewController {
         dataSource.apply(snapshot, animatingDifferences: false)
     }
     
-    private func layoutSection(for section: Section, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
+    private func layoutSection(for section: LayoutSection, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         switch section {
         case .story:
             return storytellerSection()
@@ -205,9 +196,15 @@ class MenuViewController: UIViewController {
 }
 
 extension MenuViewController: UICollectionViewDelegate {
-
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let rangeIndex = dataSource.itemIdentifier(for: indexPath) else { return }
-        coordinator?.goToProductVC(from: self, with: nil)
+        let productType = ProductTypeImpl(name: "", price: 123, imageName: "", description: "")
+        presenter.tapOnProductType(productType: productType)
+        print("tapped")
     }
+}
+
+extension MenuViewController: MenuViewProtocol {
+    
 }

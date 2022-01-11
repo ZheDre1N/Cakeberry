@@ -7,7 +7,10 @@
 
 import UIKit
 
-class ProfileCoordinator: Coordinator {
+protocol ProfileCoordinatorProtocol: CoordinatorProtocol {
+}
+
+class ProfileCoordinator: CoordinatorProtocol {
     
     var navigationController: CoordinatedNavigationController
     
@@ -17,9 +20,7 @@ class ProfileCoordinator: Coordinator {
         navigationController.coordinator = self
         
         let initialVC = ProfileViewController()
-        initialVC.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person"), tag: 1)
-        initialVC.tabBarItem.selectedImage = UIImage(systemName: "person.fill")
-        initialVC.coordinator = self
+//        initialVC.coordinator = self
         
         navigationController.viewControllers = [initialVC]
     }

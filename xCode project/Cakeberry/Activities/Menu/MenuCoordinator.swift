@@ -7,25 +7,26 @@
 
 import UIKit
 
-class MenuCoordinator: Coordinator {
+protocol MenuCoordinatorProtocol: CoordinatorProtocol {
+    init(navigationController: CoordinatedNavigationController)
+    func showDetailVC(with productType: ProductType)
+}
+
+class MenuCoordinator: MenuCoordinatorProtocol {
     
     var navigationController: CoordinatedNavigationController
+    let assemblyBuilder = AssemblyBuilder()
     
-    init(navigationController: CoordinatedNavigationController = CoordinatedNavigationController()) {
+    required init(navigationController: CoordinatedNavigationController = CoordinatedNavigationController()) {
         self.navigationController = navigationController
-        navigationController.navigationBar.prefersLargeTitles = true
-        navigationController.coordinator = self
-        
-        let initialVC = MenuViewController()
-        initialVC.tabBarItem = UITabBarItem(title: "Меню", image: UIImage(systemName: "menucard"), tag: 0)
-        initialVC.tabBarItem.selectedImage = UIImage(systemName: "menucard.fill")
-        initialVC.coordinator = self
-        
-        navigationController.viewControllers = [initialVC]
+        let view = assemblyBuilder.createMenuModule(coordinator: self)
+        view.navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController.viewControllers = [view]
     }
     
-    func goToProductVC(from vc: UIViewController, with product: Product) {
-        let destination = ProductViewController()
-        vc.present(destination, animated: true, completion: nil)
+    func showDetailVC(with productType: ProductType) {
+        let detailVC = assemblyBuilder.createDetailVC(with: productType)
+        navigationController.pushViewController(detailVC, animated: true)
+//        detailVC.present(detailVC, animated: true, completion: nil)
     }
 }

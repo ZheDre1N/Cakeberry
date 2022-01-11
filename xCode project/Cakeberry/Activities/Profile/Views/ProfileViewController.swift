@@ -9,7 +9,7 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
-    var coordinator: ProfileCoordinator?
+    var presenter: ProfileViewPresenterProtocol!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,4 +28,8 @@ class ProfileViewController: UIViewController {
     }
     */
 
+}
+
+extension ProfileViewController: ProfileViewProtocol {
+    
 }

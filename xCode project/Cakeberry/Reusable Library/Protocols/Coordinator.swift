@@ -8,6 +8,6 @@
 import UIKit
 
 /// Used to dictate the basics of all coordinators in the app.
-protocol Coordinator: AnyObject {
+protocol CoordinatorProtocol: AnyObject {
     var navigationController: CoordinatedNavigationController { get set }
 }

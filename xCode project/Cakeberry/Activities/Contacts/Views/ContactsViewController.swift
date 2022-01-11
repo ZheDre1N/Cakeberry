@@ -9,7 +9,8 @@ import UIKit
 
 class ContactsViewController: UIViewController {
     
-    var coordinator: ContactsCoordinator?
+    var presenter: ContactsViewPresenterProtocol!
+    var coordinator: ContactsCoordinatorProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,4 +29,7 @@ class ContactsViewController: UIViewController {
     }
     */
 
+}
+
+extension ContactsViewController: ContactsViewProtocol {
 }

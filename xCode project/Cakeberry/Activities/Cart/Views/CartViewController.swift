@@ -9,7 +9,8 @@ import UIKit
 
 class CartViewController: UIViewController {
 
-    var coordinator: CartCoordinator?
+    var presenter: CartViewPresenterProtocol!
+    var coordinator: CartCoordinatorProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,4 +29,8 @@ class CartViewController: UIViewController {
     }
     */
 
+}
+
+extension CartViewController: CartViewProtocol {
+    
 }

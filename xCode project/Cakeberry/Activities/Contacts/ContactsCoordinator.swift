@@ -7,7 +7,10 @@
 
 import UIKit
 
-class ContactsCoordinator: Coordinator {
+protocol ContactsCoordinatorProtocol: CoordinatorProtocol {
+}
+
+class ContactsCoordinator: ContactsCoordinatorProtocol {
     
     var navigationController: CoordinatedNavigationController
     
@@ -17,8 +20,7 @@ class ContactsCoordinator: Coordinator {
         navigationController.coordinator = self
         
         let initialVC = ContactsViewController()
-        initialVC.tabBarItem = UITabBarItem(title: "Контакты", image: UIImage(systemName: "mail"), tag: 2)
-        initialVC.tabBarItem.selectedImage = UIImage(systemName: "mail.fill")
+
         initialVC.coordinator = self
         
         navigationController.viewControllers = [initialVC]

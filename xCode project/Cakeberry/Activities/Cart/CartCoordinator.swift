@@ -7,7 +7,10 @@
 
 import UIKit
 
-class CartCoordinator: Coordinator {
+protocol CartCoordinatorProtocol: CoordinatorProtocol {
+}
+
+class CartCoordinator: CartCoordinatorProtocol {
     
     var navigationController: CoordinatedNavigationController
     
@@ -17,10 +20,7 @@ class CartCoordinator: Coordinator {
         navigationController.coordinator = self
         
         let initialVC = CartViewController()
-        initialVC.tabBarItem = UITabBarItem(title: "Корзина", image: UIImage(systemName: "cart"), tag: 3)
-        initialVC.tabBarItem.badgeValue = "2"
-        initialVC.tabBarItem.badgeColor = .main5
-        initialVC.tabBarItem.selectedImage = UIImage(systemName: "cart.fill")
+
         initialVC.coordinator = self
         
         navigationController.viewControllers = [initialVC]

@@ -9,8 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductViewController" customModule="Cakeberry" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="Cakeberry" customModuleProvider="target">
             <connections>
+                <outlet property="descriptionLabel" destination="CAB-Pr-lCH" id="vn2-AE-FP9"/>
+                <outlet property="nameLabel" destination="bwq-Rk-o87" id="KZw-rH-vDQ"/>
+                <outlet property="productImageView" destination="Z6m-JL-klV" id="G1a-Jp-B5C"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="p2" translatesAutoresizingMaskIntoConstraints="NO" id="Z6m-JL-klV">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z6m-JL-klV">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="300" id="jVs-pB-xfS"/>
@@ -120,7 +123,6 @@
         </view>
     </objects>
     <resources>
-        <image name="p2" width="3024" height="4032"/>
         <namedColor name="Main5">
             <color red="0.78799998760223389" green="0.40000000596046448" blue="0.6119999885559082" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
