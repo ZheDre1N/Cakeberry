@@ -9,7 +9,7 @@ import UIKit
 
 protocol MenuCoordinatorProtocol: CoordinatorProtocol {
     init(navigationController: CoordinatedNavigationController)
-    func showDetailVC(with productType: ProductType)
+    func showDetailVC(with product: Product)
 }
 
 class MenuCoordinator: MenuCoordinatorProtocol {
@@ -24,8 +24,8 @@ class MenuCoordinator: MenuCoordinatorProtocol {
         navigationController.viewControllers = [view]
     }
     
-    func showDetailVC(with productType: ProductType) {
-        let detailVC = assemblyBuilder.createDetailVC(with: productType)
+    func showDetailVC(with product: Product) {
+        let detailVC = assemblyBuilder.createDetailVC(with: product)
         navigationController.pushViewController(detailVC, animated: true)
 //        detailVC.present(detailVC, animated: true, completion: nil)
     }

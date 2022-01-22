@@ -44,9 +44,9 @@ class MenuViewController: UIViewController {
         view.addSubview(collectionView)
     }
     
-    private var popular: [Product] = ProductImpl.getProducts()
-    private var categories: [Product] = ProductImpl.getProducts()
-    private var products: [Product] = ProductImpl.getProducts()
+    private var popular = Product.popular
+    private var categories = Product.categories
+    private var products = Product.allCases
     
     private lazy var storytellerRange: ClosedRange<Int> = 1...1
     private lazy var popularRange: ClosedRange<Int> = (storytellerRange.upperBound + 1)...(storytellerRange.upperBound + popular.count)
@@ -69,6 +69,7 @@ class MenuViewController: UIViewController {
                 guard let cell = collectionView.dequeueReusableCell(
                     withReuseIdentifier: PopularCell.reuseIdentifier, for: indexPath) as? PopularCell else { fatalError("Cannot create the cell") }
                 let popularItem = self.popular[indexPath.row]
+                cell.productPriceLabel.text = "От \(popularItem.minPrice) ₽"
                 
                 return cell
             }
@@ -77,6 +78,7 @@ class MenuViewController: UIViewController {
                 guard let cell = collectionView.dequeueReusableCell(
                     withReuseIdentifier: CategoryCell.reuseIdentifier, for: indexPath) as? CategoryCell else { fatalError("Cannot create the cell") }
                 let category = self.categories[indexPath.row]
+                cell.titleLabel.text = category
                 return cell
             }
             
@@ -87,6 +89,8 @@ class MenuViewController: UIViewController {
                         fatalError("Cannot create the cell")
                     }
                 let product = self.products[indexPath.row]
+                cell.priceLabel.text = "От \(product.minPrice) ₽"
+                cell.titleLabel.text = "\(product.title)"
                 return cell
             }
             
@@ -111,9 +115,10 @@ extension MenuViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let rangeIndex = dataSource.itemIdentifier(for: indexPath) else { return }
-        let productType = ProductTypeImpl(name: "", price: 123, imageName: "", description: "")
-        presenter.tapOnProductType(productType: productType)
-        print("tapped")
+        let product = Product.cheesecake(.d18sm, .berry(.currant))
+        
+        // tap
+        presenter.tapOnProduct(product: product)
     }
 }
 

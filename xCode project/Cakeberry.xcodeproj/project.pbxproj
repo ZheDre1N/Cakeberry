@@ -10,7 +10,6 @@
 		DF2407B02784C46A002AFD8D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF2407AE2784C46A002AFD8D /* DetailViewController.swift */; };
 		DF2407B12784C46A002AFD8D /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DF2407AF2784C46A002AFD8D /* DetailViewController.xib */; };
 		DF519EE2278C19B600B01D34 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF519EE1278C19B600B01D34 /* DetailPresenter.swift */; };
-		DF519EE4278C251B00B01D34 /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF519EE3278C251B00B01D34 /* ProductType.swift */; };
 		DF519EE6278C4A9300B01D34 /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF519EE5278C4A9300B01D34 /* AssemblyBuilder.swift */; };
 		DF519EEA278C9C8300B01D34 /* MenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF519EE9278C9C8300B01D34 /* MenuPresenter.swift */; };
 		DFA148F3276B636800A86C54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA148F2276B636800A86C54 /* AppDelegate.swift */; };
@@ -28,7 +27,6 @@
 		DFA572F8278DD46A007EBDCC /* ContactsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA572F7278DD46A007EBDCC /* ContactsPresenter.swift */; };
 		DFA572FA278DD5A6007EBDCC /* CartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA572F9278DD5A6007EBDCC /* CartPresenter.swift */; };
 		DFA57300278E0011007EBDCC /* MenuCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA572FF278E0011007EBDCC /* MenuCollectionViewLayout.swift */; };
-		DFA57302278E0903007EBDCC /* MenuCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA57301278E0903007EBDCC /* MenuCollectionViewDataSource.swift */; };
 		DFA9AD2A276F9D900093613D /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9AD29276F9D900093613D /* MainTabBarController.swift */; };
 		DFA9AD2D276F9EC50093613D /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9AD2C276F9EC50093613D /* MenuCoordinator.swift */; };
 		DFA9AD2F276F9ED60093613D /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9AD2E276F9ED60093613D /* ProfileCoordinator.swift */; };
@@ -56,7 +54,6 @@
 		DF2407AE2784C46A002AFD8D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DF2407AF2784C46A002AFD8D /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		DF519EE1278C19B600B01D34 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
-		DF519EE3278C251B00B01D34 /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
 		DF519EE5278C4A9300B01D34 /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
 		DF519EE9278C9C8300B01D34 /* MenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPresenter.swift; sourceTree = "<group>"; };
 		DFA148EF276B636800A86C54 /* Cakeberry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cakeberry.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +73,6 @@
 		DFA572F7278DD46A007EBDCC /* ContactsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsPresenter.swift; sourceTree = "<group>"; };
 		DFA572F9278DD5A6007EBDCC /* CartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPresenter.swift; sourceTree = "<group>"; };
 		DFA572FF278E0011007EBDCC /* MenuCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewLayout.swift; sourceTree = "<group>"; };
-		DFA57301278E0903007EBDCC /* MenuCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		DFA9AD29276F9D900093613D /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		DFA9AD2C276F9EC50093613D /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		DFA9AD2E276F9ED60093613D /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
@@ -173,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				DFA572FF278E0011007EBDCC /* MenuCollectionViewLayout.swift */,
-				DFA57301278E0903007EBDCC /* MenuCollectionViewDataSource.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -356,7 +351,6 @@
 		DFDA4C43278A1C3600B4146C /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DF519EE3278C251B00B01D34 /* ProductType.swift */,
 				DFD270F5278B7AD400DB3F13 /* Product.swift */,
 			);
 			path = Model;
@@ -515,13 +509,11 @@
 				DF519EE2278C19B600B01D34 /* DetailPresenter.swift in Sources */,
 				DFA14924276B7F6C00A86C54 /* CartViewController.swift in Sources */,
 				DFAB0C13278240A6003F0937 /* ProductCell.swift in Sources */,
-				DFA57302278E0903007EBDCC /* MenuCollectionViewDataSource.swift in Sources */,
 				DFA148F5276B636800A86C54 /* SceneDelegate.swift in Sources */,
 				DFAB0C0A278220D7003F0937 /* UIColor.swift in Sources */,
 				DFA572F6278D8D6D007EBDCC /* ProfilePresenter.swift in Sources */,
 				DFAB0C0D278223CF003F0937 /* MenuViewController.swift in Sources */,
 				DFFAB70027834EBF00BDF7F7 /* CategoryCell.swift in Sources */,
-				DF519EE4278C251B00B01D34 /* ProductType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

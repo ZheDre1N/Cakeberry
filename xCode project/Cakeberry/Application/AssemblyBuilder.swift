@@ -10,7 +10,7 @@ import UIKit
 protocol AssemblyBuilderProtocol {
     // Menu
     func createMenuModule(coordinator: MenuCoordinatorProtocol) -> UIViewController
-    func createDetailVC(with productType: ProductType) -> UIViewController
+    func createDetailVC(with product: Product) -> UIViewController
     
     // Profile
     func createProfileModule(coordinator: ProfileCoordinatorProtocol) -> UIViewController
@@ -33,9 +33,9 @@ class AssemblyBuilder: AssemblyBuilderProtocol {
         return view
     }
     
-    func createDetailVC(with productType: ProductType) -> UIViewController {
+    func createDetailVC(with product: Product) -> UIViewController {
         let view = DetailViewController()
-        let presenter = DetailPresenter(view: view, productType: productType)
+        let presenter = DetailPresenter(view: view, product: product)
         view.presenter = presenter
         return view
     }

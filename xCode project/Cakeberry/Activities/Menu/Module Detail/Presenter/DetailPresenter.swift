@@ -8,12 +8,12 @@
 import Foundation
 
 protocol DetailViewProtocol: AnyObject {
-    func presentProductType(productType: ProductType)
+    func presentProductType(product: Product)
     func sendToPresenter(product: Product)
 }
 
 protocol DetailViewPresenterProtocol: AnyObject {
-    init(view: DetailViewProtocol, productType: ProductType)
+    init(view: DetailViewProtocol, product: Product)
     
     func addToCart(product: Product)
 }
@@ -21,11 +21,11 @@ protocol DetailViewPresenterProtocol: AnyObject {
 class DetailPresenter: DetailViewPresenterProtocol {
     
     weak var view: DetailViewProtocol?
-    var productType: ProductType?
+    var product: Product?
     
-    required init(view: DetailViewProtocol, productType: ProductType) {
+    required init(view: DetailViewProtocol, product: Product) {
         self.view = view
-        self.productType = productType
+        self.product = product
     }
     
     func addToCart(product: Product) {

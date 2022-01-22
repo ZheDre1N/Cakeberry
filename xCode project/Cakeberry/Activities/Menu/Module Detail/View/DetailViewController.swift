@@ -14,8 +14,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var presenter: DetailViewPresenterProtocol!
-    var productType: Product!
-    private let cake = ProductImpl(name: "", price: 123, imageName: "", description: "")
+    var product: Product!
+    private let cake = Product.cheesecake(.d18sm, .berry(.currant))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class DetailViewController: UIViewController {
 }
 
 extension DetailViewController: DetailViewProtocol {
-    func presentProductType(productType: ProductType) {
+    func presentProductType(product: Product) {
 //        productImageView.image = UIImage(named: product.imageName)
 //        nameLabel.text = product.name
 //        descriptionLabel.text = product.description

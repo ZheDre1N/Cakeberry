@@ -13,7 +13,7 @@ protocol MenuViewProtocol: AnyObject {
 
 protocol MenuViewPresenterProtocol: AnyObject {
     init(view: MenuViewProtocol)
-    func tapOnProductType(productType: ProductType)
+    func tapOnProduct(product: Product)
 }
 
 class MenuPresenter: MenuViewPresenterProtocol {
@@ -25,7 +25,7 @@ class MenuPresenter: MenuViewPresenterProtocol {
         self.view = view
     }
     
-    func tapOnProductType(productType: ProductType) {
-        coordinator?.showDetailVC(with: productType)
+    func tapOnProduct(product: Product) {
+        coordinator?.showDetailVC(with: product)
     }
 }
