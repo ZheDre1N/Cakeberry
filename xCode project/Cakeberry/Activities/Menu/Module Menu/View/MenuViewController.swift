@@ -70,7 +70,8 @@ class MenuViewController: UIViewController {
                     withReuseIdentifier: PopularCell.reuseIdentifier, for: indexPath) as? PopularCell else { fatalError("Cannot create the cell") }
                 let popularItem = self.popular[indexPath.row]
                 cell.productPriceLabel.text = "От \(popularItem.minPrice) ₽"
-                
+                cell.productNameLabel.text = popularItem.title
+                cell.productImageView.image = UIImage(named: popularItem.imageName)
                 return cell
             }
             
@@ -91,6 +92,7 @@ class MenuViewController: UIViewController {
                 let product = self.products[indexPath.row]
                 cell.priceLabel.text = "От \(product.minPrice) ₽"
                 cell.titleLabel.text = "\(product.title)"
+                cell.imageView.image = UIImage(named: product.imageName)
                 return cell
             }
             

@@ -16,6 +16,13 @@ enum Product {
     // Без декора, Ягоды, мастика, подтеки, надпись, цифра
     // 0 Р,
     
+    var imageName: String {
+        switch self {
+        default:
+            return "noimage"
+        }
+    }
+    
     var price: Int {
         switch self {
         case .cake(.d16sm, _):
@@ -52,14 +59,39 @@ enum Product {
     
     var title: String {
         switch self {
-        case .cake:
-            return "Классический торт"
-        case .cheesecake:
-            return "Чизкейк"
-        case .cupcake:
-            return "Капкейки"
-        case .bentocake:
-            return "Бентоторт"
+        case .cake(_, .strawberries):
+            return "Торт клубника со сливками"
+        case .cake(_, .berry):
+            return "Торт ягодный"
+        case .cake(_, .chocolateHazelnut):
+            return "Торт шоколад-фундук"
+        case .cake(_, .pistachioRaspberry):
+            return "Торт фисташка-малина"
+        case .cake(_, .cheeryChoholate):
+            return "Торт вишня-шоколад"
+        case .cake(_, .redVelvet):
+            return "Торт красный бархат"
+            
+        case .cheesecake(_, .berry):
+            return "Чизкейк ягодный"
+        case .cheesecake(_, .chocolate):
+            return "Чизкейк шоколадный"
+        case .cheesecake(_, .newYork):
+            return "Чизкейк Нью-Йорк"
+        case .cheesecake(_, .mangoPassion):
+            return "Чизкейк манго-маракуйя"
+            
+        case .cupcake(_, .chocolate):
+            return "Капкейки шоколадные"
+        case .cupcake(_, .vanilla):
+            return "Капкейки ванильные"
+            
+        case .bentocake(_, .vanilla):
+            return "Бенто торт ванильный"
+        case .bentocake(_, .chocolate):
+            return "Бенто торт шоколадный"
+        case .bentocake(_, .pistachio):
+            return "Бенто торт фисташковый"
         }
     }
     
@@ -69,7 +101,7 @@ enum Product {
     case cupcake (CupcakeSize, CupcakeOption)
     case bentocake (BentocakeSize, BentocakeOption)
     
-    // allCases
+    // basic menu
     static let allCases: [Product] = [
         Self.cake(.d16sm, .strawberries),
         Self.cake(.d16sm, .redVelvet(.cherry)),
@@ -106,9 +138,7 @@ enum Product {
         "Капкейки",
         "Бенто торты"
     ]
-    
 
-    
     // Cake
     enum CakeSize {
         case d16sm
