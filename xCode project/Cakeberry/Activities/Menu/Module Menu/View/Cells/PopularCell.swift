@@ -21,9 +21,9 @@ class PopularCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func configure(with title: String, imageName: String, price: String) {
-        productNameLabel.text = title
-        productPriceLabel.text = price
-        productImageView.image = UIImage(named: imageName)
+    func configure(with product: Product) {
+        productNameLabel.text = product.title
+        productPriceLabel.text = "\(product.minPrice)"
+        productImageView.image = UIImage(named: product.imageName)
     }
 }

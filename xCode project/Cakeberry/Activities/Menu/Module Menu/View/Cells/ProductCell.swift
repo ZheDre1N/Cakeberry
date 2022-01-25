@@ -21,11 +21,11 @@ class ProductCell: UICollectionViewCell {
         // Initialization code
     }
 
-    func configure(with title: String, description: String, imageName: String, price: String) {
-        titleLabel.text = title
-        descriptionLabel.text = description
-        priceLabel.text = price
-        imageView.image = UIImage(named: imageName)
+    func configure(with product: Product) {
+        titleLabel.text = product.title
+        descriptionLabel.text = product.title
+        priceLabel.text = String(product.minPrice)
+        imageView.image = UIImage(named: product.imageName)
     }
     
 }

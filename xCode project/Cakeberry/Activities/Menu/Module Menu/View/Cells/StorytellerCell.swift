@@ -13,7 +13,7 @@ class StorytellerCell: UICollectionViewCell {
     @IBOutlet weak var storytellerRowView: StorytellerRowView!
     
     static let reuseIdentifier = "storytellerCell"
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,7 +23,18 @@ class StorytellerCell: UICollectionViewCell {
     }
     
     private func fetchStorytellerView() {
-        let uuid = UUID().uuidString
+        
+        let userDefaults = UserDefaults.standard
+        var uuid: String
+        
+        if let oldUUID = userDefaults.string(forKey: "UUID") {
+            // old user
+            uuid = oldUUID
+        } else {
+            // new user
+            uuid = UUID().uuidString
+            userDefaults.set(uuid, forKey: "UUID")
+        }
         
         // Storyteller SDK configure. Admin must be replaced by user ID
         let userInput = UserInput(externalId: uuid)

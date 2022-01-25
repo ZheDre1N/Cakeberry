@@ -12,8 +12,9 @@ class MenuViewController: UIViewController {
     var presenter: MenuViewPresenterProtocol!
     
     private var collectionView: UICollectionView! = nil
-    private var dataSource: UICollectionViewDiffableDataSource<LayoutSection, Int>! = nil
-    
+    private var dataSource = MenuCollectionViewDiffableDataSource().dataSource
+    private let viewLayout = MenuCollectionViewLayout()
+
     // MARK: - Private properties.
     
     override func viewDidLoad() {
@@ -27,8 +28,7 @@ class MenuViewController: UIViewController {
     }
     
     private func configureHierarchy() {
-        let menuCollectionViewLayout = MenuCollectionViewLayout()
-        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: menuCollectionViewLayout.createLayout())
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: viewLayout.createLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .secondarySystemBackground
         
@@ -43,6 +43,7 @@ class MenuViewController: UIViewController {
         
         view.addSubview(collectionView)
     }
+    
     
     private var popular = Product.popular
     private var categories = Product.categories
@@ -69,9 +70,7 @@ class MenuViewController: UIViewController {
                 guard let cell = collectionView.dequeueReusableCell(
                     withReuseIdentifier: PopularCell.reuseIdentifier, for: indexPath) as? PopularCell else { fatalError("Cannot create the cell") }
                 let popularItem = self.popular[indexPath.row]
-                cell.productPriceLabel.text = "От \(popularItem.minPrice) ₽"
-                cell.productNameLabel.text = popularItem.title
-                cell.productImageView.image = UIImage(named: popularItem.imageName)
+                cell.configure(with: popularItem)
                 return cell
             }
             
@@ -90,9 +89,7 @@ class MenuViewController: UIViewController {
                         fatalError("Cannot create the cell")
                     }
                 let product = self.products[indexPath.row]
-                cell.priceLabel.text = "От \(product.minPrice) ₽"
-                cell.titleLabel.text = "\(product.title)"
-                cell.imageView.image = UIImage(named: product.imageName)
+                cell.configure(with: product)
                 return cell
             }
             
@@ -109,14 +106,15 @@ class MenuViewController: UIViewController {
         snapshot.appendItems(Array(categoriesRange))
         snapshot.appendSections([sections[3]])
         snapshot.appendItems(Array(productsRange))
-        dataSource.apply(snapshot, animatingDifferences: false)
+        dataSource?.apply(snapshot, animatingDifferences: false)
     }
+    
 }
 
 extension MenuViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let rangeIndex = dataSource.itemIdentifier(for: indexPath) else { return }
+        guard let rangeIndex = dataSource!.itemIdentifier(for: indexPath) else { return }
         let product = Product.cheesecake(.d18sm, .berry(.currant))
         
         // tap
